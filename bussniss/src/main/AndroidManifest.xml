@@ -1,0 +1,7 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="app.picliu.it.com.bussniss">
+
+    <application>
+        <activity android:name=".BussnissActivity" />
+    </application>
+</manifest>

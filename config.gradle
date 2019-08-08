@@ -1,0 +1,27 @@
+ext {
+
+    //android
+    compileSdkVersion = 27
+    minSdkVersion = 17
+    targetSdkVersion = 27
+    buildToolsVersion = '27.0.3'
+    androidSupportLibVersion = '27.1.1'
+
+    //android arch core
+    androidArchVersion = '1.1.1'
+
+    //依赖库
+    dependencies = [
+
+            ArouterCompiler: 'com.alibaba:arouter-compiler:1.2.1'
+    ]
+    read_config = {
+        Properties properties = new Properties()
+        if (project.rootProject.file('debug.properties').exists()) {
+            properties.load project.rootProject.file('debug.properties').newDataInputStream()
+            return properties.getProperty("DEBUG_MODE").toBoolean()
+        } else {
+            return false
+        }
+    }
+}
