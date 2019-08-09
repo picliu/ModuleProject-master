@@ -9,16 +9,23 @@ import com.alibaba.android.arouter.launcher.RouteClassLoader;
  * *  @name:picliu
  * *  @date:2019-08-08
  */
-public class MyApplication extends Application{
+public class MyApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        ARouter.init(this, new RouteClassLoader() {
-            @Override
-            public Class<?> loadClass(String className) throws ClassNotFoundException {
-
-                return Class.forName(className);
+        try {
+            if (BuildConfig.DEBUG) {
+                ARouter.openDebug();
+                ARouter.openLog();
             }
-        });
+            ARouter.init(this, new RouteClassLoader() {
+                @Override
+                public Class<?> loadClass(String className) throws ClassNotFoundException {
+                    return Class.forName(className);
+                }
+            });
+        } catch (Throwable e) {
+            e.printStackTrace();
+        }
     }
 }
