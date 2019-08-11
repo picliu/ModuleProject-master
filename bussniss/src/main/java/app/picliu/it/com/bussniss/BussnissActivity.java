@@ -6,6 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
+
 import app.picliu.it.com.service.bussniss2.Bussniss2Service;
 import app.picliu.it.com.service.ServiceProvider;
 
@@ -13,6 +15,7 @@ import app.picliu.it.com.service.ServiceProvider;
  * *  @name:picliu
  * *  @date:2019-08-08
  */
+@Route(path = "/bussniss/activity")
 public class BussnissActivity extends AppCompatActivity {
 
     private TextView mTvBussniss;

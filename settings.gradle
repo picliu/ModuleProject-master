@@ -1,1 +1,1 @@
-include ':app', ':common',  ':bussniss', ':service', ':bussniss2'
+include ':app', ':common',  ':bussniss', ':service', ':bussniss2', ':componentapi'

@@ -5,6 +5,9 @@ import android.content.Context;
 import android.content.res.Configuration;
 import android.support.annotation.CallSuper;
 import android.support.v4.view.KeyEventDispatcher;
+
+import com.it.picliu.componentapi.Component;
+
 /**
  * *  @name:picliu
  * *  @date:2019-08-09

@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import com.alibaba.android.arouter.launcher.ARouter;
+
 import app.picliu.it.com.bussniss.BussnissActivity;
 import app.picliu.it.com.bussniss2.utils.BussnissTextChangeUtils;
 
@@ -26,9 +28,9 @@ public class MainActivity extends AppCompatActivity {
         mTvMaster.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, BussnissActivity.class);
-                startActivity(intent);
-
+//                Intent intent = new Intent(MainActivity.this, BussnissActivity.class);
+//                startActivity(intent);
+                ARouter.getInstance().build("/bussniss/activity").navigation(getApplicationContext());
             }
         });
 

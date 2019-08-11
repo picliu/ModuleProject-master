@@ -1,4 +1,4 @@
-package app.picliu.it.com.common;
+package com.it.picliu.componentapi;
 
 import android.app.Application;
 import android.content.Context;
@@ -6,26 +6,29 @@ import android.content.res.Configuration;
 
 /**
  * *  @name:picliu
- * *  @date:2019-08-09
+ * *  @date: 2019/8/9
  */
 public interface Component {
 
     /**
      * 组件初始化，这个时候不能调用其他组件的服务
+     *
      * @param context context
      */
     void init(Context context);
 
     /**
      * application 初始化
+     *
      * @param context context
      */
     void onApplicationCreate(Context context);
 
     /**
      * application AttachBaseContext
+     *
      * @param application
-     * @param base context
+     * @param base        context
      */
     void onApplicationAttachBaseContext(Application application, Context base);
 
@@ -41,6 +44,7 @@ public interface Component {
 
     /**
      * application ConfigurationChanged
+     *
      * @param newConfig
      */
     void onAppConfigurationChanged(Configuration newConfig);
